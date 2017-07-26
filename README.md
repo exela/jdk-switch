@@ -1,7 +1,7 @@
 # JDK-Switch
 
 ## Description
-JDK-Switch is a set of simple batch scripts to quickly allow WINDOWS users to switch their `JAVA_HOME` environment variable.
+JDK-Switch is a set of simple batch scripts that allows WINDOWS users to quickly switch their `JAVA_HOME` environment variable.
 
 ## Prequisites
 Make sure that the `JAVA_HOME` environment variable does not exist.
