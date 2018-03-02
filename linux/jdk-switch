@@ -1,0 +1,31 @@
+#!/bin/bash
+
+JDK6=/usr/lib/jvm/java-6-oracle/
+JDK7=/usr/lib/jvm/java-7-oracle/
+JDK8=/usr/lib/jvm/java-8-oracle/
+
+case "$1" in
+        "6")
+                sudo update-java-alternatives -s java-6-oracle
+                export JAVA_HOME=$JDK6
+                export ANT_OPTS="-Xms256m -Xmx4g -XX:PermSize=512m -XX:MaxPermSize=4g"
+                ;;
+        "7")
+                sudo update-java-alternatives -s java-7-oracle
+                export JAVA_HOME=$JDK7
+                export ANT_OPTS="-Xms256m -Xmx4g -XX:PermSize=512m -XX:MaxPermSize=4g"
+                ;;
+        "8")
+                sudo update-java-alternatives -s java-8-oracle
+                export JAVA_HOME=$JDK8
+                export ANT_OPTS="-Xms256m -Xmx4g"
+                ;;
+        *)
+                echo "Unknown JDK version! Specify 6, 7 or 8!"
+                ;;
+esac
+export JDK_HOME=$JAVA_HOME
+
+echo JAVA_HOME set to $JAVA_HOME
+export PATH=$JAVA_HOME/bin:$PATH
+java -version

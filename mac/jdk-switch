@@ -1,0 +1,31 @@
+#!/bin/bash
+
+JDK6=/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/
+JDK7=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/
+JDK8=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/
+
+case "$1" in
+        "6")
+                jenv shell oracle64-1.6.0.65
+                export JAVA_HOME=$JDK6
+                export ANT_OPTS="-Xms256m -Xmx4g -XX:PermSize=512m -XX:MaxPermSize=4g"
+                ;;
+        "7")
+                jenv shell oracle64-1.7.0.80
+                export JAVA_HOME=$JDK7
+                export ANT_OPTS="-Xms256m -Xmx4g -XX:PermSize=512m -XX:MaxPermSize=4g"
+                ;;
+        "8")
+                jenv shell oracle64-1.8.0.121
+                export JAVA_HOME=$JDK8
+                export ANT_OPTS="-Xms256m -Xmx4g"
+                ;;
+        *)
+                echo "Unknown JDK version! Specify 6, 7 or 8!"
+                ;;
+esac
+export JDK_HOME=$JAVA_HOME
+
+echo JAVA_HOME set to $JAVA_HOME
+export PATH=$JAVA_HOME/bin:$PATH
+java -version
