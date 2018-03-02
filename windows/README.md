@@ -15,4 +15,5 @@ Make sure that the `JAVA_HOME` environment variable does not exist.
 3) Save your changes.
 4) Now, all you have to do is run the batch script as an Administrator. Right-Click -> Run as Administrator.
 5) A command prompt will open and then close.
-6) Open a new command prompt and voila! the updated version of java is now being used.  You can check the version you are using with `java -version`
+6) Open a new command prompt and voila! the updated version of java is now being used.  
+You can check the version you are using with `java -version`
