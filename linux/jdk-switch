@@ -3,6 +3,7 @@
 JDK6=/usr/lib/jvm/java-6-oracle/
 JDK7=/usr/lib/jvm/java-7-oracle/
 JDK8=/usr/lib/jvm/java-8-oracle/
+JDK11=/usr/lib/jvm/java-11-oracle/
 
 case "$1" in
         "6")
@@ -20,8 +21,13 @@ case "$1" in
                 export JAVA_HOME=$JDK8
                 export ANT_OPTS="-Xms256m -Xmx4g"
                 ;;
+        "11")
+                sudo update-java-alternatives -s java-11-oracle
+                export JAVA_HOME=$JDK11
+                export ANT_OPTS="-Xms256m -Xmx4g"
+                ;;
         *)
-                echo "Unknown JDK version! Specify 6, 7 or 8!"
+                echo "Unknown JDK version! Specify 6, 7, 8, or 11!"
                 ;;
 esac
 export JDK_HOME=$JAVA_HOME

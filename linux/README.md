@@ -8,6 +8,8 @@ JDK-Switch is a batch script(s) that allows users to quickly switch their `JAVA_
 
 * Make sure that `bash` is being used.
 
+* Make sure that `update-alternatives` has the JVM's installed.
+
 ## Installation
 1) Using your favorite text editor, edit the `jdk-switch` script, pointing to where each version of Java is installed/extracted.
 
