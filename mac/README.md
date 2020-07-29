@@ -43,7 +43,10 @@ jenv add /Library/Java/JavaVirtualMachines/jdk17011.jdk/Contents/Home
 3) Save your changes.
 
 4) Place the script into a place that you can reference.  
-e.g., `~/exela/custom-scripts/`
+
+```
+sudo mv jdk-switch ~/exela/custom-scripts/
+```
 
 5) Create an alias within the `~/.bash_profile` file.  This alias `jdk` will be calling the `jdk-switch` script.
 
@@ -52,6 +55,6 @@ alias jdk='source ~/exela/custom-scripts/jdk-switch'
 ```
 
 6) Open a new terminal and use the alias `jdk` followed with the java version number you will want to use.  
-Commands such as `jdk6`, `jdk7`, `jdk8`. 
+Commands such as `jdk 6`, `jdk 7`, `jdk 8`. 
 
 7) Voila! the updated version of java is now being used.  You can check the version you are using with `java -version`

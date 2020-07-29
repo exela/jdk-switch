@@ -7,7 +7,7 @@ JDK-Switch is a set of simple batch scripts that allows WINDOWS users to quickly
 Make sure that the `JAVA_HOME` environment variable does not exist.
 
 ## Installation
-1) Include the `%JAVA_HOME%\bin` variable within your `PATH`
+1) Include the `%JAVA_HOME%\bin` variable within your `PATH` Environment Variables.
 2) Using your favorite text editor, edit the batch scripts, pointing to where each version of Java is installed.
 
     e.g. JDK 8 is typically installed within `C:\Program Files\java\jdk1.8.0_XX`

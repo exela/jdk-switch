@@ -7,22 +7,18 @@ JDK11=/usr/lib/jvm/java-11-oracle/
 
 case "$1" in
         "6")
-                sudo update-java-alternatives -s java-6-oracle
                 export JAVA_HOME=$JDK6
                 export ANT_OPTS="-Xms256m -Xmx4g -XX:PermSize=512m -XX:MaxPermSize=4g"
                 ;;
         "7")
-                sudo update-java-alternatives -s java-7-oracle
                 export JAVA_HOME=$JDK7
                 export ANT_OPTS="-Xms256m -Xmx4g -XX:PermSize=512m -XX:MaxPermSize=4g"
                 ;;
         "8")
-                sudo update-java-alternatives -s java-8-oracle
                 export JAVA_HOME=$JDK8
                 export ANT_OPTS="-Xms256m -Xmx4g"
                 ;;
         "11")
-                sudo update-java-alternatives -s java-11-oracle
                 export JAVA_HOME=$JDK11
                 export ANT_OPTS="-Xms256m -Xmx4g"
                 ;;
