@@ -8,7 +8,23 @@ JDK-Switch is a batch script(s) that allows users to quickly switch their `JAVA_
 
 * Make sure that `bash` is being used.
 
-## Installation
+* Install [jEnv](https://jenv.be)
+
+If you don't have [jEnv](http://www.jenv.be/) installed, please refer to the section on my [linux-tips doc](https://github.com/exela/docs/blob/master/os/linux-tips.md#setting-up-java_home-using-jdk-switch-and-jenv)
+
+After `jEnv` has been installed, we will need to add Java JDKs:
+
+1. Locate where Java is installed on the machine.  Typically found in `/usr/lib/jvm
+`
+2.  To add in the Java installation. e.g.,:
+
+```
+jenv add /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+
+jenv add /Library/Java/JavaVirtualMachines/jdk17011.jdk/Contents/Home
+```
+
+## JDK-Switch Installation
 
 1) Using your favorite text editor, edit the `jdk-switch` script, pointing to where each version of Java is installed/extracted.  Usually this can be found in the `/usr/lib/jvm` directory.
 
@@ -32,3 +48,5 @@ alias jdk='source /usr/local/bin/jdk-switch'
 Commands such as `jdk 6`, `jdk 7`, `jdk 8`. 
 
 7) Voila! the updated version of java is now being used.  You can verify that the `JAVA_HOME` variable has been set using `echo $JAVA_HOME`
+
+

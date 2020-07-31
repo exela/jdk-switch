@@ -7,18 +7,22 @@ JDK11=/usr/lib/jvm/java-11-oracle/
 
 case "$1" in
         "6")
+                jenv shell oracle64-1.6.0.65
                 export JAVA_HOME=$JDK6
                 export ANT_OPTS="-Xms256m -Xmx4g -XX:PermSize=512m -XX:MaxPermSize=4g"
                 ;;
         "7")
+                jenv shell oracle64-1.7.0.80
                 export JAVA_HOME=$JDK7
                 export ANT_OPTS="-Xms256m -Xmx4g -XX:PermSize=512m -XX:MaxPermSize=4g"
                 ;;
         "8")
+                jenv shell oracle64-1.8.0.192
                 export JAVA_HOME=$JDK8
                 export ANT_OPTS="-Xms256m -Xmx4g"
                 ;;
         "11")
+                jenv shell openjdk64-11.0.1
                 export JAVA_HOME=$JDK11
                 export ANT_OPTS="-Xms256m -Xmx4g"
                 ;;
